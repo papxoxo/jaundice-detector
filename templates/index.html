@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Jaundice Detector - Real-time Eye Analysis</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Header -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1><i class="fas fa-eye-medical"></i> AI Jaundice Detector</h1>
+                <p>Real-time sclera analysis for neonatal jaundice detection using advanced computer vision</p>
+            </div>
+        </header>
+
+        <!-- Upload & Webcam Section -->
+        <section class="upload-section">
+            <div class="card">
+                <h2><i class="fas fa-camera"></i> Capture or Upload Eye Image</h2>
+                
+                <!-- Webcam -->
+                <div class="webcam-container">
+                    <video id="video" autoplay muted playsinline></video>
+                    <button id="capture" class="btn btn-primary">
+                        <i class="fas fa-camera"></i> Capture
+                    </button>
+                    <!-- FIXED: Added missing preview image -->
+                    <img id="preview" class="preview-image hidden" alt="Captured image">
+                </div>
+
+                <!-- File Upload -->
+                <div class="file-upload">
+                    <label for="imageUpload" class="upload-area">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Or drag & drop image here</p>
+                        <span>Supports JPG, PNG (max 10MB)</span>
+                    </label>
+                    <input type="file" id="imageUpload" accept="image/*" hidden>
+                </div>
+
+                <button id="analyzeBtn" class="btn btn-secondary" disabled>
+                    <i class="fas fa-brain"></i> Analyze Image
+                </button>
+            </div>
+        </section>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Analyzing sclera color... Please wait</p>
+        </div>
+
+        <!-- Results -->
+        <section id="results" class="results hidden">
+            <div class="card">
+<h2><i class="fas fa-chart-line"></i> Analysis Results</h2>
+                <!-- Results preview - separate from capture preview to avoid conflicts -->
+                <img id="resultPreview" class="result-preview" style="display: block; width: 100%; max-width: 400px; height: 300px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin: 0 auto 30px;">
+                <div class="result-content">
+                    <div class="result-main">
+                        <div id="resultIcon" class="result-icon"></div>
+                        <h3 id="resultText"></h3>
+                        <div id="confidenceBar" class="confidence-bar"></div>
+                        <p id="confidenceText"></p>
+                    </div>
+                    <div class="result-message" id="resultMessage"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
