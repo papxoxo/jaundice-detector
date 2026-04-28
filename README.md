@@ -83,12 +83,17 @@ The performance of the SVM classifier is measured using:
 
 
 
-##OUTPUT
 
 <img width="1408" height="768" alt="Gemini_Generated_Image_pnybi8pnybi8pnyb" src="https://github.com/user-attachments/assets/9b7fb29d-0d89-45c3-a4c5-a5c6cd5a6af0" />
 
+## OUTPUT
+
 <img width="1600" height="1323" alt="WhatsApp Image 2026-04-23 at 12 23 15" src="https://github.com/user-attachments/assets/ea5a99e1-7d88-49e7-9e04-0f76ab5e91a2" />
+
+
 <img width="1326" height="912" alt="Screenshot 2026-04-28 at 11 28 37 PM" src="https://github.com/user-attachments/assets/8c38bb81-0531-41a8-86d0-68d006afe8b5" />
+
+
 <img width="1423" height="907" alt="Screenshot 2026-04-28 at 11 28 14 PM" src="https://github.com/user-attachments/assets/b3935467-8756-4022-bd1e-fb9ec610752e" />
 
 
